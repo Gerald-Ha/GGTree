@@ -4,7 +4,8 @@
 GGTree is a simple Python program that outputs the directory structure (tree) from the current folder to the console.
 
 ## Sample
-[14:22:05] User:~/python/tree$ ggtree
+```
+[14:22:05] User: /python/tree$ ggtree
 Directory tree for: /python/tree
 ├── README.md
 ├── README.md~
@@ -13,7 +14,8 @@ Directory tree for: /python/tree
 ├── ggtree.py
 ├── install.sh
 └── uninstall.sh
-[14:22:07] User:~/python/tree$ 
+[14:22:07] User: /python/tree$
+```
 
 
 ## Features

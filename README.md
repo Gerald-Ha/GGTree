@@ -1,10 +1,11 @@
 
 # GGTree
-<br><br>
-GGTree is a simple Python program that outputs the directory structure (tree) from the current folder to the console.
 
-## Sample
-```
+**GGTree** is a simple Python program that displays the directory structure (a tree) starting from the current directory in your console.
+
+## Example
+
+```bash
 [14:22:05] User: /python/tree$ ggtree
 Directory tree for: /python/tree
 ├── README.md
@@ -16,20 +17,24 @@ Directory tree for: /python/tree
 └── uninstall.sh
 [14:22:07] User: /python/tree$
 ```
-<br><br>
-<br><br>
+
 ## Features
-- Lists all files and directories in a clear tree structure.
-- Works from the current directory.
+
+- Provides a clear tree visualization of all files and subdirectories.  
+- Runs directly from the current directory.  
 - Easy to install and uninstall.
-<br><br>
+
 ## Prerequisites
+
 - **Python 3** must be installed on your system.
-<br><br>
-## Installation
-1. Download the files `GGTree.py`, `install.sh`, and `uninstall.sh`.
-2. Navigate to the directory where these files are located.
-3. Ensure the installation script has the correct permissions. If not, run the following command:
+
+---
+
+## Installation (Linux/macOS)
+
+1. Download the files `ggtree.py`, `install.sh`, and `uninstall.sh`.  
+2. Navigate to the directory where these files are located.  
+3. Ensure the scripts have the correct permissions:
    ```bash
    chmod +x install.sh uninstall.sh
    ```
@@ -37,81 +42,75 @@ Directory tree for: /python/tree
    ```bash
    sudo ./install.sh
    ```
-<br><br>
-<br><br>
-After installation, you can execute the program using the command `ggtree` from anywhere in the terminal.
-<br><br>
-### Optional: Use a Virtual Environment
-To avoid conflicts with system-wide Python packages, consider running the program inside a virtual environment:
-1. Create a virtual environment:
-   ```bash
-   python3 -m venv ggtree_env
-   ```
-<br><br>
-2. Activate the virtual environment:
-   - On Linux/macOS:
-     ```bash
-     source ggtree_env/bin/activate
-     ```
-<br><br>
-   - On Windows:
-     ```bash
-     ggtree_env\Scripts\activate
-     ```
-<br><br>
-<br><br>
-3. Install any dependencies (if required) within the virtual environment.
-<br><br>
+   > **Note**: Using `sudo` may be required to place files in global directories and possibly adjust the `PATH` environment variable.
+
+After the installation, you can run `ggtree` from any directory in a new terminal window.
+
+---
+
+## Installation (Windows)
+
+1. Make sure **Python 3** is installed and added to your system `PATH`.  
+2. Download the files `ggtree.py`, `install.bat`, and `uninstall.bat`.  
+3. Double-click (or run in Command Prompt) `install.bat`:
+   - This script copies `ggtree.py` and creates a wrapper batch file `ggtree.bat` in  
+     `%USERPROFILE%\AppData\Local\Programs\ggtree`.
+   - It then updates your `PATH` environment variable so you can run `ggtree` from anywhere.
+4. Open a **new** Command Prompt or PowerShell window so that the updated `PATH` variable is recognized.
+
+> **Note**: If you prefer a custom location, adjust the script and manually configure your `PATH` environment variable accordingly.
+
+---
+
 ## Usage
-Simply run the following command in the terminal:
+
+### Linux/macOS
+
+Simply open a terminal and run:
 ```bash
 ggtree
 ```
-<br><br>
-<br><br>
-The program will display the entire directory structure starting from the current folder.
-<br><br>
+The program will display the directory structure starting from your current folder.
+
+### Windows
+
+- **If you used `install.bat`** and have opened a new terminal window, you can directly run:
+  ```cmd
+  ggtree
+  ```
+- **If you did not install or it’s not in the PATH**:
+  ```cmd
+  python ggtree.py
+  ```
+  (In this case, you must be in the same directory as `ggtree.py`, or specify the full path.)
+
+---
+
 ## Uninstallation
-1. Run the uninstallation script:
+
+### Linux/macOS
+
+1. Run the `uninstall.sh` script:
    ```bash
    sudo ./uninstall.sh
    ```
-<br><br>
-This will completely remove the program.
-<br><br>
+2. This removes the program and any related files (including symlinks/entries in your system paths).
 
-<br><br>
+### Windows
 
-# windows User
+1. Double-click (or run) `uninstall.bat`:
+   - This script deletes `ggtree.py` and the `ggtree.bat` file from  
+     `%USERPROFILE%\AppData\Local\Programs\ggtree`.
+   - It then tries to remove that entire directory.
+2. **Note**: This does **not** automatically remove the entry from the `PATH` environment variable.  
+   If you want a fully cleaned environment, you must manually remove the corresponding entry from your `PATH` or modify the script to do so.
 
-### Installation on Windows
+---
 
-1. Ensure **Python 3** is installed on your system and added to the PATH environment variable.
-2. Download the file `ggtree.py` and place it in a directory of your choice.
-3. (Optional) To use GGTree system-wide, add the directory containing `ggtree.py` to your PATH environment variable:
-   - Open the Start Menu and search for "Environment Variables".
-   - Click on "Edit the system environment variables".
-   - Under "System Properties", click "Environment Variables".
-   - In the "System Variables" section, find and select the "Path" variable, then click "Edit".
-   - Click "New" and add the full path to the directory containing `ggtree.py`. Click "OK" to save.
-<br><br>
-### Usage on Windows
-1. Open the Command Prompt or PowerShell.
-2. Navigate to the directory where `ggtree.py` is located, or ensure it is in the PATH for system-wide usage.
-3. Run the program using the command:
-   ```cmd
-   python ggtree.py
-   ```
-   - If `ggtree.py` is in your PATH, you can directly use:
-     ```cmd
-     ggtree
-     ```
-<br><br>
-The program will display the directory structure starting from the current folder.
-<br><br>
 ## License
+
 This project is licensed under the **GNU GENERAL PUBLIC LICENSE**. See the `LICENSE` file for more details.
 
 ---
 
-Enjoy using GGTree!
+Enjoy using **GGTree**!

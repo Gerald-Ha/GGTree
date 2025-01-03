@@ -6,7 +6,7 @@
 ## Example
 
 ```bash
-[14:22:05] User: /python/tree$ ggtree
+User: /python/tree$ ggtree
 Directory tree for: /python/tree
 ├── README.md
 ├── README.md~
@@ -15,7 +15,7 @@ Directory tree for: /python/tree
 ├── ggtree.py
 ├── install.sh
 └── uninstall.sh
-[14:22:07] User: /python/tree$
+User: /python/tree$
 ```
 
 ## Features
